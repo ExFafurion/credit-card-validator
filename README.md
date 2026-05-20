@@ -1,22 +1,26 @@
-# Игра «Охота на гоблина»
+# Credit Card Validator
 
-[![Build and Deploy to GitHub Pages](https://github.com/ExFafurion/pic2/actions/workflows/ci.yml/badge.svg)](https://github.com/ExFafurion/pic2/actions/workflows/ci.yml)
+[![Build and Deploy to GitHub Pages](https://github.com/ExFafurion/credit-card-validator/actions/workflows/ci.yml/badge.svg)](https://github.com/ExFafurion/credit-card-validator/actions/workflows/ci.yml)
 
-**GitHub Pages**: https://ExFafurion.github.io/pic2/
+**GitHub Pages**: https://ExFafurion.github.io/credit-card-validator/
 
 ## Описание
 
-Игровое поле 4x4. Каждую секунду в случайной ячейке появляется гоблин. Нужно успеть кликнуть по нему молотком. За попадание даётся +1 очко, за пропуск — +1 к счётчику промахов. После 5 промахов игра заканчивается.
+Виджет для проверки валидности номера банковской карты.  
+- Определяет платёжную систему (Visa, Mastercard, American Express, Discover, JCB, Diners Club, Мир) по первым цифрам.
+- Проверяет номер по алгоритму Луна.
+- Выводит результат валидации и подсвечивает иконку соответствующей системы.
 
 ## Технологии
 
-- JavaScript (ES6+), ООП
+- JavaScript (ES6+), модульная структура
 - Webpack, Babel
 - Yarn (менеджер пакетов)
-- ESLint, Jest
+- ESLint (Airbnb стиль)
+- Jest (unit-тесты)
 - GitHub Actions (CI/CD)
 
-## Запуск
+## Запуск локально
 
 ```bash
 yarn install

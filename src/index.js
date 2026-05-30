@@ -27,7 +27,7 @@ const cardsContainer = document.querySelector('.cards-icons');
 
 function renderIcons() {
   cardsContainer.innerHTML = '';
-  cards.forEach(card => {
+  cards.forEach((card) => {
     const img = document.createElement('img');
     img.src = card.img;
     img.alt = card.system;
@@ -39,7 +39,7 @@ function renderIcons() {
 
 function updateCardIcons(cardNumber) {
   const system = detectPaymentSystem(cardNumber.replace(/\s+/g, ''));
-  document.querySelectorAll('.card-icon').forEach(icon => {
+  document.querySelectorAll('.card-icon').forEach((icon) => {
     if (icon.dataset.system === system) {
       icon.classList.add('active');
     } else {

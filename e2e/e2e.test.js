@@ -32,7 +32,7 @@ describe('Credit Card Validator e2e', () => {
     await page.type('#cardNumber', '4111111111111111');
     await page.click('#validateBtn');
     await page.waitForSelector('.result.valid');
-    const resultText = await page.$eval('.result', el => el.textContent);
+    const resultText = await page.$eval('.result', (el) => el.textContent);
     expect(resultText).toContain('действительна');
   });
 
@@ -41,7 +41,7 @@ describe('Credit Card Validator e2e', () => {
     await page.type('#cardNumber', '1234567890123456');
     await page.click('#validateBtn');
     await page.waitForSelector('.result.invalid');
-    const resultText = await page.$eval('.result', el => el.textContent);
+    const resultText = await page.$eval('.result', (el) => el.textContent);
     expect(resultText).toContain('Неверный');
   });
 });

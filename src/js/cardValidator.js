@@ -3,7 +3,7 @@ import { detectPaymentSystem } from './paymentSystem';
 export function luhnCheck(cardNumber) {
   let sum = 0;
   let double = false;
-  for (let i = cardNumber.length - 1; i >= 0; i--) {
+  for (let i = cardNumber.length - 1; i >= 0; i -= 1) {
     let digit = parseInt(cardNumber.charAt(i), 10);
     if (double) {
       digit *= 2;
